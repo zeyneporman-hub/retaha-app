@@ -8,7 +8,7 @@ function HotelPage({ hotelId }) {
   const hotelName = hotels[hotelId] || "Otel";
 
   const handleClick = (buttonName) => {
-    fetch("http://localhost:8000/track", {
+    fetch("https://retaha-app.onrender.com/track", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -11,7 +11,7 @@ export default function Dashboard({ hotelId }) {
   const hotelName = hotels[hotelId] || hotelId;
 
   useEffect(() => {
-    fetch(`http://localhost:8000/stats/${hotelId}/filter?period=${period}`)
+    fetch(`https://retaha-app.onrender.com/stats/${hotelId}/filter?period=${period}`)
       .then((r) => r.json())
       .then((data) => setStats(data.stats || []));
   }, [hotelId, period]);
